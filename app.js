@@ -5,11 +5,11 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
     res.status(200).send("<h1>This Works</h1>")
 })
 
-app.post("/", (req, res) => {
+app.post("/api", (req, res) => {
     const { country, city, query_string, api_key } = req.body;
     console.log(req.body);
     try {
